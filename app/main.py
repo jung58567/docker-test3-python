@@ -17,7 +17,7 @@ async def get_all_music(db: Session = Depends(get_db)):
     """
     # music_list = db.query(models.MusicDB).all()
     # return music_list
-    return '안녕하세요'
+    return {'content', '안녕하세요'}
 
 @app.get("/api/music/{music_id}", response_model=models.Music)
 async def get_music_by_id(music_id: int, db: Session = Depends(get_db)):
